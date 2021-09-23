@@ -65,6 +65,7 @@ body {
     inset: 50px;
     z-index: 10;
     display: flex;
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -74,4 +75,32 @@ body {
     color: #ff518c;
     font-size: 3.5em;
     -webkit-text-stroke: 2px #000;
+    animation: animateRocket 0.2s linear infinite;
+}
+@keyframes animateRocket {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    50% {
+        transform: translate(0px, 3px) rotate(-45deg);
+    }
+}
+.fa-cloud {
+    position: absolute;
+    top: calc(35px * var(--i));
+    left: calc(45px * var(--i));
+    font-size: 2em;
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+    animation: animateClouds 1s linear infinite;
+    animation-delay: calc(-0.5s * var(--i));
+}
+@keyframes animateClouds {
+    0% {
+        transform: translateY(calc(-35 * 5px));
+    }
+    100% {
+        transform: translateY(calc(35 * 5px));
+    }
 }
