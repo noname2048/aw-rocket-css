@@ -6,6 +6,8 @@
 
 ## 결과물
 
+![](result.gif)
+
 ## 배운점
 
 -   box-shadow 에서 option으로 존재하는 inset 은 볼록을 오목으로 바꾼다.
